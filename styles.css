@@ -1,0 +1,77 @@
+.cabecalho{
+    padding: 10px;
+    background-color: teal;
+    text-align: center;
+    color: white;
+}
+
+
+.sessao1{
+    background-color: chartreuse;
+
+}
+
+.sessao2{
+    background-color: rgb(113, 211, 15);
+}
+
+.titulo{
+    text-align: center;
+    padding-top: 40px;
+    color: black
+    
+}
+.texto{
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    color: black;
+
+}
+
+.sessao3{
+    background-image: linear-gradient(rgb(113, 211, 15), white);
+    height: 500px;
+}
+
+
+
+.caixa{
+    display: flex;
+    justify-content: center;
+}
+
+.botao{
+    color: white;
+    cursor: pointer;
+}
+.pesquisa{
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+@media (max-width: 600px){
+    .caixa{
+        display: inline;
+        width: 80%;
+        margin: auto;
+        
+    }
+ 
+    .titulo{
+        font-size: 25px;
+    }
+
+    .botao{
+        margin: 10px auto;
+        display: flex;
+        cursor: pointer;
+    }
+    .campo{
+        display: flex;
+        margin: auto;
+        cursor: pointer;
+    }
+
+}
