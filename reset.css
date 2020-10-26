@@ -1,0 +1,361 @@
+html ,  corpo ,  div ,  extensão ,  miniaplicativo ,  objeto ,  iframe ,
+h1 ,  h2 ,  h3 ,  h4 ,  h5 ,  h6 ,  p ,  blockquote ,  pré ,
+a ,  abr ,  acrônimo ,  endereço ,  grande ,  citar ,  código ,
+del ,  dfn ,  em ,  img ,  ins ,  kbd ,  q ,  s ,  samp ,
+pequeno ,  golpe ,  forte ,  sub ,  sup ,  tt ,  var ,
+b ,  u ,  i ,  centro ,
+dl ,  dt ,  dd ,  ol ,  ul ,  li ,
+conjunto de campos ,  formulário ,  rótulo ,  legenda ,
+tabela ,  legenda ,  tbody ,  tfoot ,  thead ,  tr ,  th ,  td ,
+artigo , à  parte ,  tela ,  detalhes ,  incorporar ,
+figura ,  figcaption ,  rodapé ,  cabeçalho ,  hgroup ,
+menu ,  nav ,  output ,  ruby ,  section ,  summary ,
+tempo ,  marca ,  áudio ,  vídeo {
+  margem : 0 ;
+	preenchimento : 0 ;
+	fronteira : 0 ;
+	tamanho da fonte : 100 % ;
+	fonte : herdar;
+	alinhamento vertical : linha de base;
+}
+
+/ * certifique-se de definir alguns estilos de foco para acessibilidade * /
+: focus {
+    esboço : 0 ;
+}
+
+/ * HTML5 display-role reset para navegadores mais antigos * /
+artigo ,  de lado ,  detalhes ,  figcaption ,  figura ,
+rodapé ,  cabeçalho ,  hgroup ,  menu ,  nav ,  seção {
+	display : bloco;
+}
+
+corpo {
+	altura da linha : 1 ;
+}
+
+ol ,  ul {
+	estilo de lista : nenhum;
+}
+
+blockquote ,  q {
+	citações : nenhum;
+}
+
+blockquote : antes ,  blockquote : depois ,
+q : antes ,  q : depois {
+	conteúdo : '' ;
+	conteúdo : nenhum;
+}
+
+mesa {
+	colapso da fronteira : colapso;
+	espaçamento de borda : 0 ;
+}
+
+input [ type = search ] :: -webkit-search-cancel-button ,
+input [ type = search ] :: -webkit-search-decoration ,
+input [ type = search ] :: -webkit-search-results-button ,
+input [ type = search ] :: -webkit-search-results-decoration {
+    -webkit-aparência : nenhum;
+    -moz-aparência : nenhum;
+}
+
+input [ type = search ] {
+    -webkit-aparência : nenhum;
+    -moz-aparência : nenhum;
+    -webkit-box-sizing : content-box;
+    -moz-box-sizing : content-box;
+    tamanho da caixa : caixa de conteúdo;
+}
+
+textarea {
+    estouro : automático;
+    alinhamento vertical : topo;
+    redimensionar : vertical;
+}
+
+/ **
+ * Exibição correta do ?inline-block` não definida no IE 6/7/8/9 e Firefox 3.
+ * /
+
+áudio ,
+tela ,
+video {
+    display : bloco embutido;
+    * display: embutido ;
+    * zoom: 1;
+    largura máxima : 100%;
+}
+
+/ **
+ * Impedir que os navegadores modernos exibam "áudio" sem controles.
+ * Remova o excesso de altura em dispositivos iOS 5.
+ * /
+
+áudio : não ([ controles ]) {
+    display : nenhum;
+    altura : 0 ;
+}
+
+/ **
+ * O estilo do endereço não está presente no IE 7/8/9, Firefox 3 e Safari 4.
+ * Problema conhecido: sem suporte ao IE 6.
+ * /
+
+[ oculto ] {
+    display : nenhum;
+}
+
+/ **
+ * 1. Corrija o redimensionamento do texto de maneira estranha no IE 6/7 quando o corpo `font-size` é definido usando
+ * Unidades ?em`.
+ * 2. Impedir que o tamanho do texto do iOS se ajuste após a mudança de orientação, sem desativar
+ * zoom do usuário.
+ * /
+
+html {
+    tamanho da fonte : 100 % ; / * 1 * /
+    -webkit-texto-tamanho-ajuste : 100 % ; / * 2 * /
+    -ms-text-size-ajustar : 100 % ; / * 2 * /
+}
+
+/ **
+ * Abordar a inconsistência de ?outline` entre o Chrome e outros navegadores.
+ * /
+
+a : focus {
+    contorno : pontilhado fino;
+}
+
+/ **
+ * Melhora a legibilidade quando focado e também passa o mouse em todos os navegadores.
+ * /
+
+a : ativo ,
+a : hover {
+    esboço : 0 ;
+}
+
+/ **
+ * 1. Remova a borda quando estiver dentro do elemento ?a` no IE 6/7/8/9 e Firefox 3.
+ * 2. Melhore a qualidade da imagem quando dimensionada no IE 7.
+ * /
+
+img {
+    fronteira : 0 ; / * 1 * /
+    -ms-modo de interpolação : bicúbico; / * 2 * /
+}
+
+/ **
+ * A margem do endereço não está presente no IE 6/7/8/9, Safari 5 e Opera 11.
+ * /
+
+figura {
+    margem : 0 ;
+}
+
+/ **
+ * Margem correta exibida estranhamente no IE 6/7.
+ * /
+
+form {
+    margem : 0 ;
+}
+
+/ **
+ * Defina borda, margem e preenchimento consistentes.
+ * /
+
+fieldset {
+    borda : 1 px sólido # c0c0c0 ;
+    margem : 0  2 px ;
+    preenchimento : 0,35 em  0,625 em  0,75 em ;
+}
+
+/ **
+ * 1. A cor correta não foi herdada no IE 6/7/8/9.
+ * 2. Texto correto sem quebra no Firefox 3.
+ * 3. Alinhamento correto exibido estranhamente no IE 6/7.
+ * /
+
+legend {
+    fronteira : 0 ; / * 1 * /
+    preenchimento : 0 ;
+    espaço em branco : normal; / * 2 * /
+    * margem - esquerda: -7px ; / * 3 * /
+}
+
+/ **
+ * 1. O tamanho correto da fonte não é herdado em todos os navegadores.
+ * 2. Margens de endereço definidas de forma diferente no IE 6/7, Firefox 3+, Safari 5,
+ * e Chrome.
+ * 3. Melhore a aparência e consistência em todos os navegadores.
+ * /
+
+botão ,
+entrada ,
+selecione ,
+textarea {
+    tamanho da fonte : 100 % ; / * 1 * /
+    margem : 0 ; / * 2 * /
+    alinhamento vertical : linha de base; / * 3 * /
+    * vertical - alinhar: meio ; / * 3 * /
+}
+
+/ **
+ * Endereço Firefox 3+ configurando `line-height` em ?input` usando`! Important` em
+ * a folha de estilo UA.
+ * /
+
+botão ,
+input {
+    altura da linha : normal;
+}
+
+/ **
+ * Endereço inconsistente de herança `text-transform` para` button` e `select`.
+ * Todos os outros elementos de controle de formulário não herdam os valores `text-transform`.
+ * Corrigir a herança do estilo `botão` no Chrome, Safari 5+ e IE 6+.
+ * Corrigir a herança do estilo `select` no Firefox 4+ e Opera.
+ * /
+
+botão ,
+select {
+    transformação de texto : nenhum;
+}
+
+/ **
+ * 1. Evite o bug do WebKit no Android 4.0. * Onde (2) destrói o ?audio` nativo
+ * e controles de `video`.
+ * 2. Corrigir a incapacidade de estilizar tipos de entrada clicáveis ??no iOS.
+ * 3. Melhorar a usabilidade e consistência do estilo do cursor entre o tipo de imagem
+ * ?Input` e outros.
+ * 4. Remova o espaçamento interno no IE 7 sem afetar as entradas de texto normais.
+ * Problema conhecido: o espaçamento interno permanece no IE 6.
+ * /
+
+botão ,
+ entrada html [ type = "botão" ] ,  / * 1 * /
+entrada [ type = "reset" ] ,
+input [ type = "submit" ] {
+    -webkit-aparência : botão; / * 2 * /
+    cursor : ponteiro; / * 3 * /
+    * estouro: visível ;  / * 4 * /
+}
+
+/ **
+ * Redefina o cursor padrão para elementos desativados.
+ * /
+
+botão [ desativado ] ,
+ entrada html [ desativado ] {
+    cursor : padrão;
+}
+
+/ **
+ * 1. Dimensionamento da caixa de endereço definido como content-box no IE 8/9.
+ * 2. Remova o excesso de preenchimento no IE 8/9.
+ * 3. Remova o excesso de preenchimento no IE 7.
+ * Problema conhecido: o excesso de preenchimento permanece no IE 6.
+ * /
+
+input [ type = "checkbox" ] ,
+input [ type = "radio" ] {
+    dimensionamento da caixa : caixa de borda; / * 1 * /
+    preenchimento : 0 ; / * 2 * /
+    * altura: 13px; / * 3 * /
+    * largura: 13px; / * 3 * /
+}
+
+/ **
+ * 1. Endereço ?appearance` definido como `searchfield` no Safari 5 e Chrome.
+ * 2. Endereço `box-sizing` definido como` border-box` no Safari 5 e Chrome
+ * (inclua `-moz` à prova de futuro).
+ * /
+
+input [ type = "search" ] {
+    -webkit-aparência : campo de texto ; / * 1 * /
+    -moz-box-sizing : content-box;
+    -webkit-box-sizing : content-box; / * 2 * /
+    tamanho da caixa : caixa de conteúdo;
+}
+
+/ **
+ * Remova o preenchimento interno e o botão Cancelar pesquisa no Safari 5 e Chrome
+ * no OS X.
+ * /
+
+input [ type = "search" ] :: -webkit-search-cancel-button ,
+input [ type = "search" ] :: -webkit-search-decoration {
+    -webkit-aparência : nenhum;
+}
+
+/ **
+ * Remova o preenchimento interno e a borda no Firefox 3+.
+ * /
+
+botão :: -moz-focus-inner ,
+input :: -moz-focus-inner {
+    fronteira : 0 ;
+    preenchimento : 0 ;
+}
+
+/ **
+ * 1. Remova a barra de rolagem vertical padrão no IE 6/7/8/9.
+ * 2. Melhore a legibilidade e o alinhamento em todos os navegadores.
+ * /
+
+textarea {
+    estouro : automático; / * 1 * /
+    alinhamento vertical : topo; / * 2 * /
+}
+
+/ **
+ * Remova a maior parte do espaçamento entre as células da tabela.
+ * /
+
+mesa {
+    colapso da fronteira : colapso;
+    espaçamento de borda : 0 ;
+}
+
+html ,
+botão ,
+entrada ,
+selecione ,
+textarea {
+    cor : # 222 ;
+}
+
+
+:: -moz-selection {
+    plano de fundo : # b3d4fc ;
+    sombra do texto : nenhum;
+}
+
+:: selection {
+    plano de fundo : # b3d4fc ;
+    sombra do texto : nenhum;
+}
+
+img {
+    alinhamento vertical : meio;
+}
+
+fieldset {
+    fronteira : 0 ;
+    margem : 0 ;
+    preenchimento : 0 ;
+}
+
+textarea {
+    redimensionar : vertical;
+}
+
+. chromeframe {
+    margem : 0,2 em  0 ;
+    plano de fundo : # ccc ;
+    cor : # 000 ;
+    preenchimento : 0,2 em  0 ;
+}
